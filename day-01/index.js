@@ -26,4 +26,7 @@ function oddishOrEvenish(number) {
   return num % 2 === 0 ? 'evenish' : 'oddish';
 }
 
-module.exports = { reverseSentence, addPunctuation, titleCase, oddishOrEvenish };
+function at(arr, index) {
+  return index >= 0 ? arr[index] : arr[arr.length + index];
+}
+module.exports = { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at };

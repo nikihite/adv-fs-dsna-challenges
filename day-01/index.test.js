@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, titleCase, oddishOrEvenish } = require('./index');
+const { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -22,5 +22,10 @@ describe('primitive code challenges', () => {
   it('determines whether a function is evenish or oddish', () => {
     expect(oddishOrEvenish(121)).toEqual('evenish');
     expect(oddishOrEvenish(41)).toEqual('oddish');
+  });
+  it('returns an item with corresponding index', () => {
+    const arr = ['a', 'b', 'c', 'd', 'e'];
+    expect(at(arr, 2)).toEqual('c');
+    expect(at(arr, 0)).toEqual('a');
   });
 });
