@@ -4,4 +4,19 @@ function reverseSentence(str) {
     .map((word) => word.split('').reverse().join(''))
     .join(' ');
 }
-module.exports = { reverseSentence };
+
+function addPunctuation(string) {
+  return function punctuate(quote) {
+    return(`${quote}${string}`);
+  };
+}
+
+function titleCase(sentence) {
+  return sentence
+    .toLowerCase()
+    .split(' ')
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+module.exports = { reverseSentence, addPunctuation, titleCase };
