@@ -19,4 +19,11 @@ function titleCase(sentence) {
     .join(' ');
 }
 
-module.exports = { reverseSentence, addPunctuation, titleCase };
+function oddishOrEvenish(number) {
+  let num = 0;
+  String(number).split('')
+    .map(number => num += Number(number));
+  return num % 2 === 0 ? 'evenish' : 'oddish';
+}
+
+module.exports = { reverseSentence, addPunctuation, titleCase, oddishOrEvenish };
