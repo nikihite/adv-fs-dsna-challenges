@@ -29,4 +29,10 @@ function oddishOrEvenish(number) {
 function at(arr, index) {
   return index >= 0 ? arr[index] : arr[arr.length + index];
 }
-module.exports = { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at };
+
+function anagrams(wordOne, wordTwo) {
+  const arrOne = wordOne.split('').sort().join();
+  const arrTwo = wordTwo.split('').sort().join();
+  return arrOne === arrTwo ? true : false;
+}
+module.exports = { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at, anagrams };

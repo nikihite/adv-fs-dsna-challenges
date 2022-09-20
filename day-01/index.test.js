@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at } = require('./index');
+const { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at, anagrams } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -27,5 +27,13 @@ describe('primitive code challenges', () => {
     const arr = ['a', 'b', 'c', 'd', 'e'];
     expect(at(arr, 2)).toEqual('c');
     expect(at(arr, 0)).toEqual('a');
+  });
+  it('takes two words as arguments and returns true if they are anagrams (contain the exact same letters) and false otherwise', () => {
+    const wordOne = 'superintended';
+    const wordTwo = 'unpredestined';
+    const wordThree = 'fuck';
+    const wordFour = 'truck';
+    expect(anagrams(wordOne, wordTwo)).toEqual(true);
+    expect(anagrams(wordThree, wordFour)).toEqual(false);
   });
 });
