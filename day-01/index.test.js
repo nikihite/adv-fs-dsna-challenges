@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz } = require('./index');
+const { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, fib } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -43,5 +43,11 @@ describe('primitive code challenges', () => {
       11, 'Fizz', 13, 14, 'FizzBuzz', 
       16
     ]);
+  });
+  it('should return the fibonacci sequence at the specified index', () => {
+    expect(fib(0)).toEqual(0);
+    expect(fib(1)).toEqual(1);
+    expect(fib(2)).toEqual(1);
+    expect(fib(10)).toEqual(55);
   });
 });

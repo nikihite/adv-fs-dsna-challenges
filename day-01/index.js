@@ -47,4 +47,12 @@ function fizzBuzz(number) {
     ) : [];
 }
 
-module.exports = { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz };
+function fib(n) {
+  if(n === 1 || n === 0){
+    return n;
+  } else {
+    return fib(n - 2) + fib(n - 1);
+  }
+}
+
+module.exports = { reverseSentence, addPunctuation, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, fib };
