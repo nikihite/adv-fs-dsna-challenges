@@ -13,4 +13,8 @@ describe('Stack Tests', () => {
     newItemArr.classPop();
     expect(newItemArr.readableArr).toEqual(['fox', 'goose']);
   });
+  it('peek should return the last item in the array', () => {
+    const peekedArr = new Stack(['fox', 'goose', 'lizard']);
+    expect(peekedArr.classPeek()).toEqual('lizard');
+  });
 });
