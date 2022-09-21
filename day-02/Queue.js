@@ -9,6 +9,10 @@ class Queue {
     this.#list.push(item);
   }
 
+  dequeue() {
+    this.#list = this.#list.slice(1);
+  }
+
   hasNext() {
     return this.#list.length ? true : false;
   }
