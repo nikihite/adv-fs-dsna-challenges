@@ -17,4 +17,8 @@ describe('Stack Tests', () => {
     const peekedArr = new Stack(['fox', 'goose', 'lizard']);
     expect(peekedArr.classPeek()).toEqual('lizard');
   });
+  it('checking syntax should work', () => {
+    const stack = new Stack();
+    expect(stack.checkSyntax('((2 + 3) * (4 + 11 * (2 - 1)))')).toEqual(true);
+  });
 });
